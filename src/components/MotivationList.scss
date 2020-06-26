@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.Motivation-List-Text {
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: $unit;
+  font-weight: normal;
+
+  @include sm {
+    font-size: 16px;
+  }
+}

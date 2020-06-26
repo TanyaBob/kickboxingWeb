@@ -1,0 +1,128 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.Row {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -$unit / 2;
+  margin-left: -$unit / 2;
+  & > * {
+    padding-right: $unit / 2;
+    padding-left: $unit / 2;
+  }
+  &_center_xs {
+    justify-content: center;
+  }
+  &_end_xs {
+    justify-content: flex-end;
+  }
+  @include sm {
+    margin-right: -$unit / 4;
+    margin-left: -$unit / 4;
+    & > * {
+      padding-right: $unit / 4;
+      padding-left: $unit / 4;
+    }
+  }
+  @media only screen and (min-width: $breakpoint_xs + 1) {
+    &_center_sm {
+      justify-content: center;
+    }
+    &_end_sm {
+      justify-content: flex-end;
+    }
+  }
+  @media only screen and (min-width: $breakpoint_sm + 1) {
+    &_center_md {
+      justify-content: center;
+    }
+    &_end_md {
+      justify-content: flex-end;
+    }
+  }
+  @media only screen and (min-width: $breakpoint_md + 1) {
+    &_center_lg {
+      justify-content: center;
+    }
+    &_end_lg {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.Col {
+  flex: 0 0 auto;
+  &_auto {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: $width_column * 12;
+  }
+  &_xs_offset_0 {
+    margin-left: 0;
+  }
+  &_xs_offset_1 {
+    margin-left: $width_column;
+  }
+  &_xs_offset_2 {
+    margin-left: $width_column * 2;
+  }
+  @for $i from 1 through 12 {
+    &_xs_#{$i} {
+      flex-basis: $width_column * $i;
+      max-width: $width_column * $i;
+    }
+  }
+  @media only screen and (min-width: $breakpoint_xs + 1) {
+    &_sm_offset_0 {
+      margin-left: 0;
+    }
+    &_sm_offset_1 {
+      margin-left: $width_column;
+    }
+    &_sm_offset_2 {
+      margin-left: $width_column * 2;
+    }
+    @for $i from 1 through 12 {
+      &_sm_#{$i} {
+        flex-basis: $width_column * $i;
+        max-width: $width_column * $i;
+      }
+    }
+  }
+  @media only screen and (min-width: $breakpoint_sm + 1) {
+    &_md_offset_0 {
+      margin-left: 0;
+    }
+    &_md_offset_1 {
+      margin-left: $width_column;
+    }
+    &_md_offset_2 {
+      margin-left: $width_column * 2;
+    }
+    @for $i from 1 through 12 {
+      &_md_#{$i} {
+        flex-basis: $width_column * $i;
+        max-width: $width_column * $i;
+      }
+    }
+  }
+  @media only screen and (min-width: $breakpoint_md + 1) {
+    &_lg_offset_0 {
+      margin-left: 0;
+    }
+    &_lg_offset_1 {
+      margin-left: $width_column;
+    }
+    &_lg_offset_2 {
+      margin-left: $width_column * 2;
+    }
+    @for $i from 1 through 12 {
+      &_lg_#{$i} {
+        flex-basis: $width_column * $i;
+        max-width: $width_column * $i;
+      }
+    }
+  }
+}

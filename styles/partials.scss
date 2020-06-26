@@ -1,0 +1,117 @@
+.Container {
+  padding-left: $unit * 2;
+  padding-right: $unit * 2;
+  margin: auto;
+  max-width: $width_content + $unit * 4;
+  @include sm {
+    padding-left: $padding_sm;
+    padding-right: $padding_sm;
+  }
+  @include xs {
+    padding-left: $padding_xs;
+    padding-right: $padding_xs;
+  }
+}
+
+.Button {
+  font: inherit;
+  color: white;
+  background-color: $color_black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 0.93;
+  letter-spacing: 0.15em;
+  border-radius: 8px;
+  text-transform: uppercase;
+  height: 60px;
+  padding-left: $unit;
+  padding-right: $unit;
+  border: none;
+  padding-top: 1px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -10px rgba(black, 0.5);
+  min-width: 188px;
+  transition: all $duration_short $easing_in-out;
+  & > svg {
+    position: relative;
+    top: -1px;
+    margin-right: 12px;
+  }
+  &_fullWidth {
+    width: 100%;
+  }
+  @include hover {
+    &:hover {
+      background-color: $color_wood;
+    }
+  }
+  @include sm {
+    font-size: 14px;
+    height: 52px;
+    padding-left: $unit;
+    padding-right: $unit;
+    & > svg {
+      top: -2px;
+    }
+  }
+  @include xs {
+    width: 100%;
+  }
+}
+
+.Title {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.625em;
+  color: rgba($color_greyish, 0.3);
+  margin-bottom: $unit;
+  text-transform: uppercase;
+  &_center {
+    text-align: center;
+    text-indent: 0.625em;
+  }
+  @include sm {
+    font-size: 15px;
+  }
+}
+
+.Subtitle {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: $unit;
+
+  @include sm {
+    font-size: 32px;
+  }
+}
+
+.Section-Title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: $unit / 2;
+
+  @include sm {
+    font-size: 22px;
+  }
+}
+
+.Block-Title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include sm {
+    font-size: 42px;
+  }
+  @include xs {
+    font-size: 32px;
+  }
+}

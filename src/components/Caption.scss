@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.Caption {
+  flex: 1;
+}
+
+.Caption-Pre-Title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 0.82;
+  color: $color_white;
+  margin-bottom: $unit;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  @include sm {
+    font-size: 38px;
+  }
+  @include ex {
+    font-size: calc(36px + (36 - 28) * ((100vw - 320px) / 767))
+  }
+  @include xs {
+    line-height: 1;
+    font-size: 28px;
+  }
+}
+
+.Caption-Title {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 0.82;
+  color: $color_white;
+  margin-bottom: $unit;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 24px;
+  text-shadow: 0.1em 0.1em #093038;
+  @include sm {
+    font-size: 56px;
+    letter-spacing: 20px;
+  }
+  @include ex {
+    letter-spacing: 14px;
+    font-size: calc(46px + (46 - 40) * ((100vw - 320px) / 767))
+  }
+  @include xs {
+    font-size: 32px;
+    letter-spacing: 10px;
+  }
+}
+
+.Caption-Text {
+  font-size: 26px;
+  color: rgba($color_white, 0.6);
+  margin-bottom: $unit * 1.5;
+  text-align: center;
+  letter-spacing: 2px;
+
+  @include sm {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+}

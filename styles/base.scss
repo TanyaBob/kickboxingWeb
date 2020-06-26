@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color_greyish;
+  background-color: white;
+  min-width: 320px;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  @include sm {
+    font-size: 15px;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+nav {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+a,
+button {
+  user-select: none;
+  outline-color: $color_wood;
+}

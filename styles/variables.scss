@@ -1,0 +1,33 @@
+$color_charcoal: #454b54;
+$color_greyish: #4a4a4a;
+$color_white: #f9f9f9;
+$color_white_70: rgba(254, 254, 254, 0.7);
+$color_wood: #b45537;
+$color_black: #141414;
+
+$unit: 24px;
+
+$font-family: 'Prompt', sans-serif;
+
+$width_content: 1248px;
+$width_column: 8.333%;
+
+$padding_sm: $unit * 2 - 8px;
+$padding_xs: $unit - 4px;
+
+$breakpoint_xs: 599px;
+$breakpoint_ex: 767px;
+$breakpoint_sm: 959px;
+$breakpoint_md: 1279px;
+
+$duration_shortest: 150ms;
+$duration_shorter: 200ms;
+$duration_short: 250ms;
+$duration_standard: 300ms;
+$duration_medium: 500ms;
+$duration_long: 800ms;
+$duration_longer: 1s;
+$duration_longest: 2s;
+
+$easing_in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$easing_out: cubic-bezier(0, 0, 0.2, 1);
